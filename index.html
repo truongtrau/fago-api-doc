@@ -186,35 +186,36 @@ JSON : signed hex: none</p>
 </ul>
 <div class="tab-content">
 <div class="tab-pane active" id="request-v1-transaction-pushtx-example-curl">
-<pre><code class="hljs curl nginx"><span class="hljs-attribute">curl</span> -X POST -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> -d <span class="hljs-string">"BODY={
-	"IdHub": "FH000001",
-	"Time": 1552352250,
-	"Sen": 
-	{
-		"Type": 0,
-		"Id": 0,
-		"H": 80,
-		"T": 37
-    }"
+<pre><code class="hljs curl nginx"><span class="hljs-attribute">curl</span> -X POST -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> -d <span class="hljs-string">
+    "BODY={
+            "IdHub": "FH000001",
+            "Time": 1552352250,
+            "Sen": 
+            {
+                "Type": 0,
+                "Id": 0,
+                "H": 80,
+                "T": 37
+            }"
+        }
 </span> <span class="hljs-string">"http://dev-api.fago.farm/crawler/import"</span></code></pre>
 </div>
 <div class="tab-pane" id="request-v1-transaction-pushtx-example-http">
 <pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/crawler/import/</span> HTTP/1.1
-<span class="hljs-attribute">Host</span>: dev: dev-api.fago.farm - production: api.fago.farm
+<span class="hljs-attribute">Host dev</span>: dev-api.fago.farm 
+<span class="hljs-attribute">Host prod</span>: api.fago.farm
 <span class="hljs-attribute">Content-Type</span>: application/x-www-form-urlencoded
-<span class="hljs-attribute">Content-Type</span>: application/x-www-form-urlencoded
-
 <span class="ini"><span class="hljs-attr">BODY</span>=<span class="hljs-number"></span>{
-	"IdHub": "FH000001",
-	"Time": 1552352250,
-	"Sen": 
-	{
-		"Type": 0,
-		"Id": 0,
-		"H": 80,
-		"T": 37
-	}
-}</span></code></pre>
+        "IdHub": "FH000001",
+        "Time": 1552352250,
+        "Sen": 
+        {
+            "Type": 0,
+            "Id": 0,
+            "H": 80,
+            "T": 37
+        }
+    }</span></code></pre>
 </div>
 </div>
 </div>
