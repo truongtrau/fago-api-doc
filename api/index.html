@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://api.omniexplorer.info/#request-v1-transaction-pushtx -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAFO API</title>
+<link href="./P_files/bootstrap.min.css" rel="stylesheet">
+<link href="./P_files/monokai-sublime.min.css" rel="stylesheet">
+<script src="./P_files/highlight.min.js"></script>
+<script>
+        hljs.configure({
+            tabReplace: '    ',
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+<style>body {
+    position: relative;
+}
+
+h1 {
+    margin-top: 5px;
+}
+
+h1, h2, h3, h4 {
+    color: #2b2b2b;
+}
+
+h2:after {
+    content: ' ';
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    display: none;
+    position: absolute;
+    margin-left: 8px;
+}
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
+    color: #a5a5a5;
+    display: initial;
+}
+
+.nav.nav-tabs > li > a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.tab-content {
+    padding-top: 8px;
+}
+
+.table {
+    margin-bottom: 8px;
+}
+
+pre {
+    border-radius: 0px;
+    border: none;
+}
+
+pre code {
+    margin: -9.5px;
+}
+
+.request {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.response-text-sample {
+    padding: 0px !important;
+}
+
+.response-text-sample pre {
+    margin-bottom: 0px;
+}
+
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #2b2b2b;
+    padding-top: 20px;
+}
+
+#sidebar-wrapper ul {
+    width: 250px;
+}
+
+#sidebar-wrapper ul li {
+    margin-right: 10px;
+}
+
+#sidebar-wrapper ul li a:hover {
+    background: inherit;
+    text-decoration: none;
+}
+
+#sidebar-wrapper ul li a {
+    display: block;
+    color: #ECF0F1;
+    padding: 6px 15px;
+}
+
+#sidebar-wrapper ul li ul {
+    padding-left: 25px;
+}
+
+#sidebar-wrapper ul li ul li a {
+    padding: 1px 0px;
+}
+
+#sidebar-wrapper ul li a:hover,
+#sidebar-wrapper ul li a:focus {
+    color: #e0c46c;
+    border-right: solid 1px #e0c46c;
+}
+
+#sidebar-wrapper ul li.active > a {
+    color: #e0c46c;
+    border-right: solid 3px #e0c46c;
+}
+
+#sidebar-wrapper ul li:not(.active) ul {
+    display: none;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px 15px 15px 250px;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+<div id="sidebar-wrapper">
+<div class="scrollspy">
+<ul id="main-menu" data-spy="affix" class="nav affix">
+<li>
+<a href="#">General notes</a>
+</li>
+<li>
+<a href="#">API detail</a>
+</li>
+<li class="">
+<a href="#">/v1/Post/DeviceData</a>
+</li>
+<li class="active">
+</ul>
+</div>
+</div>
+<div id="page-content-wrapper">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<h1>FAGO API</h1>
+<h2 id="doc-general-notes">
+General notes
+<a href="https://api.omniexplorer.info/#doc-general-notes"><i class="glyphicon glyphicon-link"></i></a>
+</h2>
+<p>Documentation Version: 1.0</p>
+<p>All calls herewithin may be queried against this domain as documented and will provide responses similiar to the examples. We recommend a minimum wait time of 5 seconds between repeat calls to prevent triggering the api rate limiter.</p>
+<h3 id="request-v1-transaction-pushtx">
+/v1/Post/DeviceData/
+<a href="#"><i class="glyphicon glyphicon-link"></i></a>
+</h3>
+<div><p>Broadcast Device data to the server.
+Data:
+JSON : signed hex: none</p>
+</div>
+<div>
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#" data-toggle="tab">Curl</a></li>
+<li role="presentation"><a href="https://api.omniexplorer.info/#request-v1-transaction-pushtx-example-http" data-toggle="tab">HTTP</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="request-v1-transaction-pushtx-example-curl">
+<pre><code class="hljs curl nginx"><span class="hljs-attribute">curl</span> -X POST -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> -d <span class="hljs-string">"BODY={
+	"IdHub": "FH000001",
+	"Time": 1552352250,
+	"Sen": 
+	{
+		"Type": 0,
+		"Id": 0,
+		"H": 80,
+		"T": 37
+	}"</span> <span class="hljs-string">"http://dev-api.fago.farm/crawler/import"</span></code></pre>
+</div>
+<div class="tab-pane" id="request-v1-transaction-pushtx-example-http">
+<pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/crawler/import/</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: api.fago.farm
+<span class="hljs-attribute">Content-Type</span>: application/x-www-form-urlencoded
+<span class="hljs-attribute">Content-Type</span>: application/x-www-form-urlencoded
+
+<span class="ini"><span class="hljs-attr">BODY</span>=<span class="hljs-number"></span>{
+	"IdHub": "FH000001",
+	"Time": 1552352250,
+	"Sen": 
+	{
+		"Type": 0,
+		"Id": 0,
+		"H": 80,
+		"T": 37
+	}
+}</span></code></pre>
+</div>
+</div>
+</div>
+<div>
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active">
+<a href="https://api.omniexplorer.info/#request-v1-transaction-pushtx-responses-bf01be8b-f7e4-4637-930c-95e7bffda3fe" data-toggle="tab">
+Response
+</a>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="request-v1-transaction-pushtx-responses-bf01be8b-f7e4-4637-930c-95e7bffda3fe">
+<table class="table table-bordered">
+<tbody><tr><th style="width: 20%;">Status</th><td>200 </td></tr>
+<tr><th style="width: 20%;">Content-Encoding</th><td>gzip</td></tr>
+<tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+<tr><td class="response-text-sample" colspan="2">
+<pre><code class="hljs json">{
+    <span class="hljs-attr">"success"</span>: <span class="hljs-string">"true"</span>,
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Successfully"</span>,
+}</code></pre>
+</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="request">
+<div class="tab-content">
+<div class="tab-pane active" id="request-v1-transaction-tx-txhash-responses-e84b7076-f0e8-447a-ae72-22c183e6c334">
+<table class="table table-bordered">
+<tbody><tr><th style="width: 20%;">Status</th><td>200 </td></tr>
+<tr><th style="width: 20%;">Content-Encoding</th><td>gzip</td></tr>
+<tr><th style="width: 20%;">Content-Type</th><td>application/json</td></tr>
+<tr><td class="response-text-sample" colspan="2">
+<pre><code class="hljs json">{
+    <span class="hljs-attr">"IdHub"</span>: <span class="hljs-string">"FH000001"</span>,
+    <span class="hljs-attr">"Time"</span>: <span class="hljs-number">1552352250</span>,
+    <span class="hljs-attr">"Sen"</span>: <span class="hljs-number">{</span>
+        <span class="hljs-attr">"Type"</span>: <span class="hljs-string">"0"</span>,
+        <span class="hljs-attr">"Id"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"H"</span>: <span class="hljs-number">80</span>,
+        <span class="hljs-attr">"T"</span>: <span class="hljs-literal">37</span>    
+    <span class="hljs-attr"></span>: <span class="hljs-number">}</span>
+}
+</code></pre>
+</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="./P_files/jquery-2.2.2.min.js"></script>
+<script src="./P_files/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("table:not(.table)").addClass('table table-bordered');
+    });
+</script>
+
+
+</body></html>
